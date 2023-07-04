@@ -1,5 +1,5 @@
 
-function sec(nomer) {
+function num(nomer) {
     input = document.getElementById("total").innerHTML;
     input = input + nomer;
     document.getElementById("total").innerHTML = input;
@@ -30,7 +30,7 @@ function hapus(){
 
 function sub() {
     input = document.getElementById("total").innerHTML
-    document.getElementById("total").innerHTML = reqem.substring(0, input.length - 1);
+    hasil = document.getElementById("total").innerHTML = reqem.substring(0, input.length - 1);
 } 
 
 function kali() {

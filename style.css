@@ -1,0 +1,60 @@
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.kalkulator{
+    padding-top: 6rem;
+}
+.second-table{
+    background-color: rgb(175, 11, 207);
+    padding: 5px;
+    border: 0px solid;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+button {
+    background-color: goldenrod;
+    color: white;
+    border-radius: 10%;
+    width: 50px;
+    height: 50px;
+    font-weight: bold;
+    font-size: x-large;
+}
+.total {
+    background-color: grey;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    color:white;
+    height: 80px;
+    width: 100%;
+    font-weight: bold;
+    font-size: x-large;
+    text-align: right;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+.button {
+    color: black;
+    background-color: wheat;
+}
+.zero{
+    width: 100%;
+}
