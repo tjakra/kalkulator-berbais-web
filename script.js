@@ -28,11 +28,6 @@ function hapus(){
     document.getElementById("total").innerHTML = ""
 }
 
-function sub() {
-    input = document.getElementById("total").innerHTML
-    document.getElementById("total").innerHTML = reqem.substring(0, input.length - 1);
-} 
-
 function kali() {
     input = document.getElementById("total").innerHTML
     input =  input + "*"
