@@ -11,39 +11,41 @@
     <div class="kalkulator" align="center">
         <table class="second-table">
             <tr>
-                <td colspan="4" class="total"><span id="total"></span></td>
+                <th colspan="4"><h2>kalkulator</h2></th>
             </tr>
             <tr>
-                <td><button onclick="hapus()" class="aaa">AC</button></td>
-                <td><button onclick="mines()" class="aaa">+/-</button></td>
-                <td><button onclick="pangkat()" class="aaa">%</button></td>
-                <td><button onclick="bagi()" class="button">/</button></td>
+                <td colspan="4" class="total"><span id="total">0</span></td>
+            </tr>
+            <tr>
+                <td><button onclick="hapus()" class="oprator">AC</button></td>
+                <td><button onclick="mines()" class="oprator">+/-</button></td>
+                <td><button onclick="delpart()" class="oprator"><</button></td>
+                <td><button onclick="oprator('/')" class="button">/</button></td>
             </tr>
             <tr>
                 <td><button onclick="num(7)">7</button></td>
                 <td><button onclick="num(8)">8</button></td>
                 <td><button onclick="num(9)">9</button></td>
-                <td><button onclick="kali()" class="button">X</button></td>
+                <td><button onclick="oprator('*')" class="button">X</button></td>
             </tr>
             <tr>
                 <td><button onclick="num(4)">4</button></td>
                 <td><button onclick="num(5)">5</button></td>
                 <td><button onclick="num(6)">6</button></td>
-                <td><button onclick="kurang()" class="button">-</button></td>
+                <td><button onclick="oprator('-')" class="button">-</button></td>
             </tr>
             <tr>
                 <td><button onclick="num(1)">1</button></td>
                 <td><button onclick="num(2)">2</button></td>
                 <td><button onclick="num(3)">3</button></td>
-                <td><button onclick="tambah()" class="button">+</button></td>
+                <td><button onclick="oprator('+')" class="button">+</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button onclick="sec(0)" class="zero">0</button></td>
-                <td><button onclick="note()">,</button></td>
+                <td colspan="2"><button onclick="num(0); isnull = true" class="zero">0</button></td>
+                <td><button onclick="koma()">,</button></td>
                 <td><button onclick="hasil()" class="button">=</button></td>
             </tr>
         </table>
     </div>
 </body>
-
 </html>
