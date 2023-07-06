@@ -9,12 +9,21 @@ function num(nomer){
     input = document.getElementById("total").innerHTML
 
     if(isoprator && isnull){
-        isidi = input.substring(0,input.length-1)
-        isi = isidi + nomer
-        document.getElementById("total").innerHTML = isi
-        isnull = false
-        isoprator = false
-        console.log(isidi)
+        cek = input.substring(jumlah.length,input.length)
+        if(nomer >= 1){
+            isidi = input.substring(0,input.length-1)
+            isi = isidi + nomer
+            document.getElementById("total").innerHTML = isi
+            isoprator =false
+            isnull = false
+            console.log(nomer)
+        }
+        else{
+            isidi = input.substring(0,input.length-1)
+            isi = isidi + nomer
+            document.getElementById("total").innerHTML = isi
+            isnull = false
+        }
     }
     else if(ismines && input.substring(1,2) == 0){
         isi = "-"+nomer
@@ -62,19 +71,22 @@ function delpart(){
 // oprator
 function oprator(value){
     input = document.getElementById("total").innerHTML
-    cek = input.substring(input.length -1, input.length)
+    cek = input.substring(input.length -2, input.length -1)
     if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
         isidi = jumlah.substring(0,jumlah.length-1)
-        isi = isidi + value
+        isi = isidi + value + "0"
+        console.log(jumlah)
         document.getElementById("total").innerHTML = isi
-        jumlah = input.substring(0, input.length - 1) +value
+        jumlah = input.substring(0, input.length - 2) +value
         isoprator = true
+        isnull = true
         return isoprator,jumlah
     }else{
-        isi = input+ value
+        isi = input+ value + "0"
         document.getElementById("total").innerHTML = isi
         jumlah = input.substring(0, input.length)+ value
         isoprator = true
+        isnull = true
         return isoprator,jumlah
     }
 }
@@ -82,11 +94,13 @@ function oprator(value){
 function mines(){
     input = document.getElementById("total").innerHTML
     cek = jumlah.substring(jumlah.length -1, input.length)
-    if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
+    if(cek == '-'){
+        
+    }
+    else if(cek == '*'|| cek == '+'|| cek == '/'){
         isidi = input.substring(jumlah.length, input.length)
         isi = jumlah + "-" + isidi
         document.getElementById("total").innerHTML = isi
-        isoprator = false
     }
     else{
         ismines = true
@@ -107,6 +121,17 @@ function koma(){
 // proses perhitungan
 function hasil(){
     input = document.getElementById("total").innerHTML
-    document.getElementById("total").innerHTML = eval(input)
-    resetvar()
+    cek = input.substring(input.length -1, input.length)
+    if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
+        isi = input.substring(0, input.length -1)
+        console.log(isi)
+        document.getElementById("total").innerHTML = eval(isi)
+        resetvar()
+    }
+    else{
+        console.log(jumlah)
+        console.log(input)
+        document.getElementById("total").innerHTML = eval(input)
+        resetvar()
+    }
 }
