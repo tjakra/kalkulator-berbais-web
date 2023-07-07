@@ -9,10 +9,17 @@ function num(nomer){
     input = document.getElementById("total").innerHTML
 
     if(isoprator && isnull){
-        isidi = input.substring(0,input.length-1)
-        isi = isidi + nomer
-        document.getElementById("total").innerHTML = isi
-        isnull = false
+        cek = input.substring(jumlah.length, input.length)
+        if(cek >= 1){
+            isi = input + nomer
+            document.getElementById("total").innerHTML = isi
+        }
+        else {
+            isidi = input.substring(0,input.length-1)
+            isi = isidi + nomer
+            document.getElementById("total").innerHTML = isi
+            isnull = false
+        }
     }
     else if(ismines && input.substring(1,2) == 0){
         isi = "-"+nomer
@@ -63,7 +70,7 @@ function delpart(){
 // oprator
 function oprator(value){
     input = document.getElementById("total").innerHTML
-    cek = input.substring(input.length -1, input.length)
+    cek = input.substring(input.length -1, input.length) 
     if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
         isidi = jumlah.substring(0,jumlah.length-1)
         isi = isidi + value
