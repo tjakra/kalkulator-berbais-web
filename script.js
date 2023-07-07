@@ -92,10 +92,13 @@ function mines(){
         }
         else if(cek == '*'|| cek == '+'|| cek == '/'){
             console.log(jumlah)
-            cek = input.substring(jumlah.length, input.length)
-            update = cek.substring(0,1)
+            ceks = input.substring(jumlah.length, input.length)
+            update = ceks.substring(0,1)
             if(update == "-"){
+                isidi = input.substring(jumlah.length +1,input.length)
+                isi = jumlah + isidi
                 ismines = false
+                document.getElementById("total").innerHTML = isi
                 console.log("sudah mines")
             }
             else{
@@ -107,7 +110,9 @@ function mines(){
         }
     }
     else if(ismines){
-        console.log(ismines)
+        isi = input.substring(1, input.length)
+        document.getElementById("total").innerHTML = isi
+        ismines = false
     }
     else{
         ismines = true
