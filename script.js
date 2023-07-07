@@ -9,21 +9,10 @@ function num(nomer){
     input = document.getElementById("total").innerHTML
 
     if(isoprator && isnull){
-        cek = input.substring(jumlah.length,input.length)
-        if(nomer >= 1){
-            isidi = input.substring(0,input.length-1)
-            isi = isidi + nomer
-            document.getElementById("total").innerHTML = isi
-            isoprator =false
-            isnull = false
-            console.log(nomer)
-        }
-        else{
-            isidi = input.substring(0,input.length-1)
-            isi = isidi + nomer
-            document.getElementById("total").innerHTML = isi
-            isnull = false
-        }
+        isidi = input.substring(0,input.length-1)
+        isi = isidi + nomer
+        document.getElementById("total").innerHTML = isi
+        isnull = false
     }
     else if(ismines && input.substring(1,2) == 0){
         isi = "-"+nomer
@@ -71,22 +60,22 @@ function delpart(){
 // oprator
 function oprator(value){
     input = document.getElementById("total").innerHTML
-    cek = input.substring(input.length -2, input.length -1)
+    cek = input.substring(input.length -1, input.length)
     if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
         isidi = jumlah.substring(0,jumlah.length-1)
-        isi = isidi + value + "0"
+        isi = isidi + value
         console.log(jumlah)
         document.getElementById("total").innerHTML = isi
-        jumlah = input.substring(0, input.length - 2) +value
+        jumlah = input.substring(0, input.length - 1) +value
         isoprator = true
-        isnull = true
+        isnull = false
         return isoprator,jumlah
     }else{
-        isi = input+ value + "0"
+        isi = input+ value
         document.getElementById("total").innerHTML = isi
         jumlah = input.substring(0, input.length)+ value
         isoprator = true
-        isnull = true
+        isnull = false
         return isoprator,jumlah
     }
 }
