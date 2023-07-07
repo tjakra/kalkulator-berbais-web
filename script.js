@@ -85,14 +85,29 @@ function oprator(value){
 
 function mines(){
     input = document.getElementById("total").innerHTML
-    cek = jumlah.substring(jumlah.length -1, input.length)
-    if(cek == '-'){
-        
+    if(isoprator){
+        cek = jumlah.substring(jumlah.length -1, jumlah.length)
+        if(cek == '-'){
+            console.log("already mines")
+        }
+        else if(cek == '*'|| cek == '+'|| cek == '/'){
+            console.log(jumlah)
+            cek = input.substring(jumlah.length, input.length)
+            update = cek.substring(0,1)
+            if(update == "-"){
+                ismines = false
+                console.log("sudah mines")
+            }
+            else{
+                ismines = false
+                isidi = input.substring(jumlah.length, input.length)
+                isi = jumlah + "-" + isidi
+                document.getElementById("total").innerHTML = isi
+            }
+        }
     }
-    else if(cek == '*'|| cek == '+'|| cek == '/'){
-        isidi = input.substring(jumlah.length, input.length)
-        isi = jumlah + "-" + isidi
-        document.getElementById("total").innerHTML = isi
+    else if(ismines){
+        console.log(ismines)
     }
     else{
         ismines = true
