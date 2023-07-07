@@ -36,6 +36,7 @@ function resetvar(){
     iskoma = false
     isoprator = false
     ismines = false
+    isnull = false
 }
 
 // hapus semua
@@ -53,7 +54,9 @@ function delpart(){
     else{
         isi = input.substring(0,input.length - 1)
         document.getElementById("total").innerHTML = isi
-        resetvar()
+        iskoma = false
+        isnull = false
+        ismines = false
     }
 }
 
