@@ -88,7 +88,7 @@ function mines(){
     if(isoprator){
         cek = jumlah.substring(jumlah.length -1, jumlah.length)
         if(cek == '-'){
-            console.log("already mines")
+            console.log("already mines");
         }
         else if(cek == '*'|| cek == '+'|| cek == '/'){
             console.log(jumlah)
