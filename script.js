@@ -79,6 +79,7 @@ function oprator(value){
         jumlah = input.substring(0, input.length - 1) +value
         isoprator = true
         isnull = false
+        iskoma= false
         return isoprator,jumlah
     }else{
         isi = input+ value
@@ -86,6 +87,7 @@ function oprator(value){
         jumlah = input.substring(0, input.length)+ value
         isoprator = true
         isnull = false
+        iskoma = false
         return isoprator,jumlah
     }
 }
@@ -130,10 +132,21 @@ function mines(){
 
 function koma(){
     input = document.getElementById("total").innerHTML
-    isi = input+"."
-    document.getElementById("total").innerHTML = isi
-    iskoma = true
-    isnull = false
+    if(iskoma){
+
+    }
+    else if(isoprator && input.length == jumlah.length){
+        isi = input + "0."
+        document.getElementById("total").innerHTML = isi
+        isnull = false
+        iskoma = true
+    }
+    else{
+        isi = input+"."
+        document.getElementById("total").innerHTML = isi
+        iskoma = true
+        isnull = false
+    }
 }
 
 
