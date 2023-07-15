@@ -2,6 +2,7 @@ var iskoma = false
 var isoprator = false
 var ismines = false
 var isnull =false
+var ishasil = false
 var jumlah
 
 // input nomer
@@ -20,6 +21,11 @@ function num(nomer){
             document.getElementById("total").innerHTML = isi
             isnull = false
         }
+    }
+    else if(ishasil){
+        isi = nomer
+        document.getElementById("total").innerHTML = isi
+        ishasil = false
     }
     else if(ismines && input.substring(1,2) == 0){
         isi = "-"+nomer
@@ -44,12 +50,14 @@ function resetvar(){
     isoprator = false
     ismines = false
     isnull = false
+    jumlah = ""
 }
 
 // hapus semua
 function hapus(){
     document.getElementById("total").innerHTML = "0"
     resetvar()
+    ishasil = false
 }
 
 // hapus sebagian
@@ -154,6 +162,7 @@ function koma(){
 function hasil(){
     input = document.getElementById("total").innerHTML
     cek = input.substring(input.length -1, input.length)
+    ishasil = true
     if(cek == '*'|| cek == '+'|| cek == '-'|| cek == '/'){
         isi = input.substring(0, input.length -1)
         console.log(isi)
