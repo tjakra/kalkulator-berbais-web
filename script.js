@@ -88,6 +88,7 @@ function oprator(value){
         isoprator = true
         isnull = false
         iskoma= false
+        ishasil= false
         return isoprator,jumlah
     }else{
         isi = input+ value
@@ -96,6 +97,7 @@ function oprator(value){
         isoprator = true
         isnull = false
         iskoma = false
+        ishasil= false
         return isoprator,jumlah
     }
 }
